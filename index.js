@@ -33,6 +33,14 @@ app.post("/add-post", (req, res) => {
   res.redirect("/");
 });
 
+app.post("/edit-post/:id", (req, res) => {
+  const postId = Number(req.body["post-id"]);
+  const post = postData.find((post) => post.id === postId);
+  post.body = req.body["post-body"];
+
+  res.redirect(`/post/${postId}`);
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
