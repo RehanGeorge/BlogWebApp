@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .post {
@@ -14,6 +15,8 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    flex-basis: 20%;
+    text-align: center;
 }
 
 .post-content {
@@ -21,4 +24,12 @@
     padding: 10px;
     border-radius: 5px;
     width: 50vw;
+}
+
+.form-element {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30vw;
 }

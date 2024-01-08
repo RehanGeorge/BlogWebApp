@@ -22,6 +22,17 @@ app.get("/post/:id", (req, res) => {
   }
 });
 
+app.post("/add-post", (req, res) => {
+  const newPost = {
+    id: postData.length + 1,
+    title: req.body.title,
+    body: req.body.body,
+  };
+
+  postData.push(newPost);
+  res.redirect("/");
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

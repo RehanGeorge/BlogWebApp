@@ -10,4 +10,15 @@
 <% }); %>
 </div>
 
+<div class="center">
+    <h2>Add a Post</h2>
+</div>
+<div class="center container">
+    <form action="/add-post" method="POST">
+        <input type="text" name="title" placeholder="Title" class="form-element" required>
+        <textarea name="body" placeholder="Body" class="form-element"></textarea>
+        <button type="submit" class="form-element">Add Post</button>
+    </form>
+</div>
+
 <%- include("partials/footer") %>
