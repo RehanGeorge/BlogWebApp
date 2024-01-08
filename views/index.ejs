@@ -2,4 +2,12 @@
 
 <h1 class="center">Welcome to the Blog Site</h1>
 
+<div class="container">
+<% posts.forEach(element => { %>
+        <div class="post">
+            <h2 class="post-title"><%= element.title %></h2>
+        </div>
+<% }); %>
+</div>
+
 <%- include("partials/footer") %>
