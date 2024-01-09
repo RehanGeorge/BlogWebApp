@@ -41,6 +41,14 @@ app.post("/edit-post/:id", (req, res) => {
   res.redirect(`/post/${postId}`);
 });
 
+app.post("/delete-post/:id", (req, res) => {
+  const postId = Number(req.body["post-id"]);
+  const postIndex = postData.findIndex((post) => post.id === postId);
+  postData.splice(postIndex, 1);
+
+  res.redirect("/");
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

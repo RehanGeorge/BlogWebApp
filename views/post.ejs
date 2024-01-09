@@ -8,8 +8,15 @@
     <form action="/edit-post/<%= post.id %>" method="POST">
         <input type="hidden" name="post-body" class="hidden-text">
         <input type="hidden" name="post-id" value="<%= post.id %>">
-        <button class="edit">Edit Post</button>
+        <button class="edit btn btn-secondary">Edit Post</button>
     </form>
+
+    <form action="/delete-post/<%= post.id %>" method="POST">
+        <input type="hidden" name="post-body" class="hidden-text">
+        <input type="hidden" name="post-id" value="<%= post.id %>">
+        <button class="delete btn btn-danger">Delete Post</button>
+    </form>
+</div>
 
 <%- include("partials/footer") %>
 <script src="/scripts/post.js"></script>
